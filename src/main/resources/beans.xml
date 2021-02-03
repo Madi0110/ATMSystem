@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="client1" class="com.example.demo.Client">
+        <constructor-arg index="0" value="Madiyar"/>
+        <constructor-arg index="1" value="Seisembayev"/>
+        <constructor-arg index="2" value="5169497139408763"/>
+        <constructor-arg index="3" value="1818"/>
+        <constructor-arg index="4" value="25000"/>
+    </bean>
+
+    <bean id="client2" class="com.example.demo.Client">
+        <constructor-arg index="0" value="Zhamilya"/>
+        <constructor-arg index="1" value="Tugelbayeva"/>
+        <constructor-arg index="2" value="4390872207956985"/>
+        <constructor-arg index="3" value="0809"/>
+        <constructor-arg index="4" value="17000"/>
+    </bean>
+
+    <bean id="client3" class="com.example.demo.Client">
+        <constructor-arg index="0" value="Magzhan"/>
+        <constructor-arg index="1" value="Abishov"/>
+        <constructor-arg index="2" value="449074964367485"/>
+        <constructor-arg index="3" value="1497"/>
+        <constructor-arg index="4" value="7000"/>
+    </bean>
+
+
+    <bean id="bank" class="com.example.demo.Bank">
+        <property name="clients">
+            <list>
+                <ref bean = "client1"/>
+                <ref bean = "client2"/>
+                <ref bean = "client3"/>
+            </list>
+        </property>
+    </bean>
+
+
+
+
+</beans>
